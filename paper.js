@@ -10,6 +10,8 @@ class paper
 			}
 	    this.body=Bodies.cirle(x, y, 20, options);
         this.radius = 20;
+		this.x = x;
+		this.y = y;
 
         this.image = loadImage("paper.png");
 	
@@ -23,9 +25,9 @@ class paper
 
 			push()
 			translate(Pos.x, Pos.y);
-			ellipseMode(RADIUS);
+			imageMode(CENTER);
 			fill("black");
-			ellipse(0,0,this.radius, this.radius);
+			image(this.image, 0, 0, 20, 20);
 			pop()
 			
 	}
